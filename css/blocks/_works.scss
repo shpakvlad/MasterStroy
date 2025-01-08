@@ -1,0 +1,35 @@
+//*************************************
+// CSS style module for section _works
+// author: Shpakov Vladyslav
+// at: 07.01.2025 21:09
+//*************************************
+
+@use "../helpers" as *;
+
+.works {
+
+  &__body {
+
+
+    &-inner {
+      padding-block: var(--section-padding);
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin-bottom: fluid(80, 48);
+  }
+
+  &__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: toRem(32);
+    row-gap: toRem(40);
+
+    &-item {
+    border-radius: toRem(30);
+    }
+  }
+}

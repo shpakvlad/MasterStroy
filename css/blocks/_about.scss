@@ -1,0 +1,63 @@
+//*************************************
+// CSS style module for section _about
+// author: Shpakov Vladyslav
+// at: 06.01.2025 10:14
+//*************************************
+
+@use "../helpers" as *;
+
+.left-title {
+  text-align: left;
+}
+
+.about {
+
+  &__body {
+    width: 100%;
+    height: toRem(748);
+    background-color: var(--header-panel-background-color);
+  }
+
+  &__inner-body {
+    height: 748px; // fluid(748, 380);
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background: url(../../img/about/bg.png) 0 0 / 748px no-repeat;
+
+    @include tablet {
+      background-size: cover;
+    }
+  }
+
+  &__inner-content {
+    width: 57%;
+    min-height: toRem(530);
+    padding: toRem(16);
+
+    color: var(--light-color);
+    border-top-left-radius: toRem(30);
+    border-bottom-left-radius: toRem(30);
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+
+    @include tablet {
+      width: 100%;
+      padding: toRem(32);
+    }
+
+    h2,
+    h3,
+    .long-text {
+      max-width: toRem(660);
+    }
+
+    h2 {
+      margin-bottom: fluid(50, 30);
+    }
+
+    h3 {
+      margin-bottom: fluid(24, 16);
+    }
+  }
+}

@@ -1,0 +1,51 @@
+//*************************************
+// CSS style module for section _advantages-grid-item
+// author: Shpakov Vladyslav
+// at: 08.01.2025 10:44
+//*************************************
+
+@use "../helpers" as *;
+
+.advantages__item {
+  width: fluid(330, 194);
+  //height: fluid(353, 237);
+  padding: toRem(14) toRem(28) toRem(38);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--light-color);
+  border-radius: toRem(30);
+
+  &-image {
+    @include square(fluid(90, 60));
+    margin-bottom: fluid(30, 18);
+    grid-area: image;
+  }
+
+  &-title {
+    @include fluid-font-size(14, 11);
+    margin-bottom: fluid(15, 10);
+    grid-area: title;
+
+    @include mobile {
+      text-align: left;
+    }
+  }
+
+  &-description {
+    @include fluid-font-size(14, 10);
+    line-height: 18px;
+    grid-area: description;
+  }
+
+  @include mobile {
+    width: fluid(630, 294);
+    padding-top: toRem(22);
+    padding-bottom: toRem(28);
+    display: grid;
+    grid-template-areas:
+          "image title"
+           "description description";
+    grid-template-columns: toRem(120) 1fr;
+  }
+}
