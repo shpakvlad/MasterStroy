@@ -4,6 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = merge(common, {
+  output: {
+    publicPath: '/MasterStroy/', // Укажите путь к вашему репозиторию
+  },
   mode: 'production',
   plugins: [
     new HtmlWebpackPlugin({
@@ -25,7 +28,4 @@ module.exports = merge(common, {
       ],
     }),
   ],
-  output: {
-    publicPath: '/MasterStroy/', // Укажите путь к вашему репозиторию
-  },
 });

@@ -1,11 +1,14 @@
 {
-  "name": " ",
+  "name": "MasterStroy",
   "version": "0.0.1",
   "description": "",
   "private": true,
   "keywords": [
     ""
   ],
+
+  "homepage": "https://shpakvlad.github.io/MasterStroy",
+
   "license": "",
   "author": "Shpakov Vladyslav",
   "scripts": {
