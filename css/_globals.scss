@@ -1,0 +1,88 @@
+//*************************************
+// CSS style module for section globals
+// author: Shpakov Vladyslav
+// at: 28.12.2024 7:58
+//*************************************
+
+@use "helpers" as *;
+
+body {
+  @include fluid-font-size(14, 13);
+  @include scrollbar();
+
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+  font-family: var(--general-font), sans-serif;
+  font-weight: normal; //400
+}
+
+html {
+  &.is-locked {
+    overflow: hidden;
+  }
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+h1 {
+  @include fluid-font-size(40, 20);
+}
+
+h2 {
+  @include fluid-font-size(35, 18);
+}
+
+h3 {
+  @include fluid-font-size(20, 16);
+}
+
+h4, .h4 {
+  @include fluid-font-size(14, 12)
+}
+
+h5, .h5 {
+  @include fluid-font-size(12, 10);
+}
+
+.long-text {
+  @include fluid-font-size(12, 10);
+
+  margin-bottom: toRem(26);
+
+  &:last-of-type{
+    margin-bottom: toRem(48);
+  }
+}
+
+a,
+button {
+  transition-duration: var(--transition-duration);
+}
+
+.white-title {
+  color: var(--light-color);
+}
+
+///***** REMOVE !!!!!!
+//.header, footer, .hero, .catalog, .about, .top-products, .production, .works {
+//  display: none;
+//}
+
+
+
+
+/**
+  Добавляем обводку для клавиатур
+ */
+:focus-visible {
+  outline: var(--accent-color) dashed toRem(2);
+  outline-offset: toRem(2);
+  transition-duration: 0s !important;
+}

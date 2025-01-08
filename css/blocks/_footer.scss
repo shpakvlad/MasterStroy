@@ -1,0 +1,82 @@
+//*************************************
+// CSS style module for section _footer
+// author: Shpakov Vladyslav
+// at: 04.01.2025 18:48
+//*************************************
+
+@use "../helpers" as *;
+
+.footer {
+  width: 100%;
+  background-color: var(--footer-background-color);
+
+  &__menu {
+    padding: toRem(60) 0 toRem(40);
+    display: flex;
+    justify-content: flex-end;
+    column-gap: toRem(80);
+
+    @include mobile {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: toRem(30) 0 toRem(20);
+      justify-content: center;
+    }
+
+    &-column {
+      &:first-child {
+        margin-right: auto;
+      }
+
+      &-caption {
+        color: var(--accent-color);
+        margin-bottom: toRem(15);
+
+        @include mobile {
+          margin-bottom: 0;
+          margin-top: toRem(8);
+        }
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-item {
+      margin-bottom: toRem(15);
+
+      @include mobile {
+        margin-bottom: 0;
+      }
+    }
+
+    &-link {
+      color: var(--text-color);
+
+      &:is([aria-label]) {
+        @include hover {
+          color: var(--accent-color);
+        }
+      }
+
+      @include mobile {
+        padding-block: toRem(5);;
+      }
+    }
+  }
+
+  &__extra {
+    width: 100%;
+    text-align: center;
+    margin-bottom: toRem(25);
+  }
+
+  .author {
+    padding-block: toRem(10);
+    padding-left: toRem(10);
+    color: var(--light-color);
+    background-color: var(--header-panel-background-color);
+  }
+}

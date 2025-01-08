@@ -1,0 +1,80 @@
+//*************************************
+// CSS style module for section _catalog
+// author: Shpakov Vladyslav
+// at: 05.01.2025 18:30
+//*************************************
+
+@use "../helpers" as *;
+
+.catalog {
+
+  &__body {
+    padding-block: var(--section-padding);
+
+    &-inner {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, fluid(240, 139));
+    grid-template-rows: repeat(2, fluid(264, 184));
+    grid-row-gap: toRem(62);
+    margin-bottom: toRem(72);
+    justify-content: space-around;
+
+    @include mobile {
+        grid-template-columns: repeat(3, fluid(240, 139));
+        grid-template-rows: repeat(3, fluid(264, 184));
+        grid-row-gap: toRem(22);
+    }
+
+    @media (width <= toRem(530)) {
+        grid-template-columns: repeat(2, fluid(240, 139));
+        grid-template-rows: repeat(4, fluid(264, 184));
+        grid-row-gap: toRem(22);
+    }
+
+    &-card {
+      width: fluid(240, 140);
+      height: fluid(264, 164);
+      //margin-bottom: toRem(92);
+      border-radius: toRem(30);
+      -webkit-box-shadow: 4px 4px 20px 0 rgba(0,0,0,0.25);
+      -moz-box-shadow: 4px 4px 20px 0 rgba(0,0,0,0.25);
+      box-shadow: 4px 4px 20px 0 rgba(0,0,0,0.25);
+      justify-content: center;
+
+      @include hover {
+        scale: 1.02;
+        -webkit-box-shadow: 8px 8px 20px 0 rgba(0,0,0,0.25);
+        -moz-box-shadow: 8px 8px  20px 0 rgba(0,0,0,0.25);
+        box-shadow: 8px 8px  20px 0 rgba(0,0,0,0.25);
+      }
+    }
+  }
+
+  .card__image {
+    width: fluid(177, 107);
+    height: fluid(114, 74);
+    margin-top: fluid(60, 30);
+    margin-right: fluid(32, 16);
+    margin-bottom: fluid(44, 15);
+    margin-left: fluid(32, 16);
+  }
+
+  .card__caption {
+    color: var(--text-color);
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+  }
+
+
+  &__button {
+    align-self: center;
+  }
+
+}

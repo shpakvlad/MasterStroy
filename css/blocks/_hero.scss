@@ -1,0 +1,45 @@
+//*************************************
+// CSS style module for section _hero
+// author: Shpakov Vladyslav
+// at: 05.01.2025 17:53
+//*************************************
+
+@use "../helpers" as *;
+
+.hero {
+  &__body {
+    padding-block: toRem(135);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./../../img/hero/bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &-inner {
+      max-width: toRem(780);
+      margin-block: auto;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    margin-bottom: toRem(20);
+    color: var(--light-color);
+    text-align: center;
+    font-weight: bold;
+  }
+
+  &__subtitle {
+    width: 100%;
+    margin-bottom: toRem(32);
+    color: var(--light-color);
+    text-align: center;
+    font-weight: normal;
+  }
+
+  &__button {
+    align-self: center;
+  }
+
+
+}
