@@ -28,4 +28,13 @@ module.exports = merge(common, {
       ],
     }),
   ],
+  rules: [
+    {
+      test: /\.(png|jpe?g|gif|svg|webp)$/i,
+      type: 'asset/resource',
+      generator: {
+        filename: 'img/[name][ext]',
+      },
+    },
+  ],
 });
