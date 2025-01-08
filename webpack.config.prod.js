@@ -4,9 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = merge(common, {
-  output: {
-    publicPath: '/MasterStroy/', // Укажите путь к вашему репозиторию
-  },
   mode: 'production',
   plugins: [
     new HtmlWebpackPlugin({
@@ -27,14 +24,5 @@ module.exports = merge(common, {
         { from: 'site.webmanifest', to: 'site.webmanifest' },
       ],
     }),
-  ],
-  rules: [
-    {
-      test: /\.(png|jpe?g|gif|svg|webp)$/i,
-      type: 'asset/resource',
-      generator: {
-        filename: 'img/[name][ext]',
-      },
-    },
   ],
 });
