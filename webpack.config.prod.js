@@ -25,4 +25,7 @@ module.exports = merge(common, {
       ],
     }),
   ],
+  output: {
+    publicPath: '/MasterStroy/', // Укажите путь к вашему репозиторию
+  },
 });
