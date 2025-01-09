@@ -611,7 +611,7 @@ button {
 
 .hero__body {
   padding-block: 8.4375rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/MasterStroy/img/hero/bg1.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/MasterStroy/img/about/bg1.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -726,7 +726,7 @@ button {
   display: flex;
   justify-content: end;
   align-items: center;
-  background: url(./../../img/about/bg.webp) 0 0/748px no-repeat;
+  background: url(/MasterStroy/img/about/bg.webp) 0 0/748px no-repeat;
 }
 @media (width <= 64.062375rem) {
   .about__inner-body {
