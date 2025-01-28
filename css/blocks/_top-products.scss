@@ -1,0 +1,29 @@
+//*************************************
+// CSS style module for section _top-products
+// author: Shpakov Vladyslav
+// at: 06.01.2025 21:30
+//*************************************
+
+@use "../helpers/index" as *;
+
+.top-products {
+  padding-block: var(--section-padding);
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, fluid(510, 300));
+    grid-template-rows: repeat(3, fluid(350, 205));
+    gap: toRem(16) toRem(30);
+    justify-content: center;
+
+    @media (width <= 900px) {
+      grid-template-columns: repeat(1, fluid(510, 300));
+      grid-template-rows: repeat(4, fluid(350, 205));
+      row-gap: toRem(30);
+    }
+
+
+  }
+
+
+}

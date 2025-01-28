@@ -1,0 +1,13 @@
+//*************************************
+// CSS style module for section _section-title
+// author: Shpakov Vladyslav
+// at: 07.01.2025 21:10
+//*************************************
+
+@use "../helpers/index" as *;
+
+.section__title {
+  width: 100%;
+  margin-bottom: fluid(80, 48);
+  text-align: center;
+}

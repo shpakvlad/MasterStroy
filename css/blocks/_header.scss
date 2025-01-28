@@ -1,0 +1,142 @@
+//*************************************
+// CSS style module for section _header
+// author: Shpakov Vladyslav
+// at: 03.01.2025 20:14
+//*************************************
+
+@use "../helpers/index" as *;
+
+.header {
+
+  &__top {
+    color: var(--light-color);
+    background-color: var(--header-panel-background-color);
+
+    &-inner {
+      font-size: .75rem;
+      padding-block: toRem(17);
+      display: flex;
+      column-gap: toRem(20);
+      align-items: center;
+    }
+
+    &-button {
+
+      @include mobile {
+        align-self: center;
+      }
+    }
+  }
+
+  &__block-info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__block-image {
+    margin-right: toRem(20);
+  }
+
+  &__block-line {
+    height: toRem(45);
+    width: toRem(2);
+    background-color: var(--light-color);
+  }
+
+  .block-1 {
+    .header__block-image {
+      @include square(toRem(34));
+    }
+
+    .header__block-text {
+      width: toRem(208);
+    }
+  }
+
+  .block-2 {
+    .header__block-image {
+      @include square(toRem(22));
+    }
+
+    .header__block-text {
+      width: toRem(114);
+    }
+  }
+
+  .block-3 {
+    .header__block-image {
+      @include square(toRem(15));
+    }
+
+    .header__block-text {
+      width: toRem(114);
+    }
+  }
+
+  .block-4 {
+    margin-right: 10px;
+  }
+
+  &__menu-image {
+    margin-right: toRem(67);
+  }
+
+  &__body-inner {
+    padding-block: toRem(12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__overlay {
+
+    @include mobile {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1rem;
+
+      background-color: var(--header-panel-background-color);
+      transition-duration: var(--transition-duration);
+
+      &:not(.is-active) {
+        @include hide;
+
+        translate: 100%;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    column-gap: toRem(49);
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      row-gap: .5rem;
+      color: var(--light-color);
+    }
+
+    &-item {
+      font-size: .75rem;
+      font-weight: bold;
+      color: var(--text-color);
+
+      &:hover {
+        color: var(--accent-color);
+      }
+
+      @include tablet {
+        text-align: center;
+      }
+
+      @include mobile {
+        padding-block: 20px;
+        color: var(--light-color);
+      }
+    }
+  }
+}
