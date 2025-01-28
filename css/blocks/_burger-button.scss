@@ -4,7 +4,7 @@
 // at: 04.01.2025 10:55
 //*************************************
 
-@use "../helpers" as *;
+@use "../helpers/index" as *;
 
 .burger-button {
   @include square(toRem(44));

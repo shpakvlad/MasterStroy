@@ -4,7 +4,7 @@
 // at: 06.01.2025 21:30
 //*************************************
 
-@use "../helpers" as *;
+@use "../helpers/index" as *;
 
 .top-products {
   padding-block: var(--section-padding);
